@@ -7,124 +7,24 @@
    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css"> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-        }
-
-        .nav-toggle {
-            position: fixed;
-            top: 20px;
-            left: 20px;
-            z-index: 1000;
-            background: none;
-            border: none;
-            font-size: 24px;
-            cursor: pointer;
-            padding: 10px;
-        }
-
-        .sidebar {
-            position: fixed;
-            left: -250px;
-            top: 0;
-            height: 100vh;
-            width: 250px;
-            background-color: #333;
-            transition: left 0.3s ease;
-            padding-top: 60px;
-        }
-
-        .sidebar.active {
-            left: 0;
-        }
-
-        .nav-links {
-            list-style: none;
-        }
-
-        .nav-links li a {
-            display: flex;
-            align-items: center;
-            padding: 15px 20px;
-            color: white;
-            text-decoration: none;
-            transition: background-color 0.3s;
-        }
-
-        .nav-links li a:hover {
-            background-color: #444;
-        }
-
-        .nav-links li a i {
-            margin-right: 15px;
-            width: 20px;
-            text-align: center;
-        }
-
-        main {
-            padding: 20px;
-            margin-left: 0;
-            transition: margin-left 0.3s ease;
-        }
-
-        main.shifted {
-            margin-left: 250px;
-        }
-
-        @media (max-width: 768px) {
-            main.shifted {
-                margin-left: 0;
-            }
-        }
-    </style>
 </head>
 <body>
-    <button class="nav-toggle" onclick="toggleNav()">
-        <i class="fas fa-bars" id="menu-icon"></i>
-    </button>
-
-    <nav class="sidebar">
-        <ul class="nav-links">
-            <li><a href="#"><i class="fas fa-home"></i>Home</a></li>
-            <li><a href="#"><i class="fas fa-user"></i>Profile</a></li>
-            <li><a href="#"><i class="fas fa-envelope"></i>Messages</a></li>
-            <li><a href="#"><i class="fas fa-cog"></i>Settings</a></li>
-            <li><a href="#"><i class="fas fa-info-circle"></i>About</a></li>
-        </ul>
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">
+                <img src="./IMG-20250311-WA0008.jpg" alt="Suman Mohapatra" class="nav-profile-img">
+                <span>SUMAN MOHAPATRA</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
     </nav>
-
-    <main>
-        <h1>Welcome to the Dashboard</h1>
-        <p>Click the menu icon to toggle the navigation bar.</p>
-    </main>
-
-    <script>
-        function toggleNav() {
-            const sidebar = document.querySelector('.sidebar');
-            const main = document.querySelector('main');
-            const menuIcon = document.getElementById('menu-icon');
-            
-            sidebar.classList.toggle('active');
-            main.classList.toggle('shifted');
-            
-            // Toggle menu icon
-            if (sidebar.classList.contains('active')) {
-                menuIcon.classList.remove('fa-bars');
-                menuIcon.classList.add('fa-times');
-            } else {
-                menuIcon.classList.remove('fa-times');
-                menuIcon.classList.add('fa-bars');
-            }
-        }
-    </script>
 
     <div class="slider-container">
         <section id="home" class="slide active">
