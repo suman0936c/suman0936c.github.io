@@ -207,6 +207,8 @@ h2 {
     border-radius: 1rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: var(--transition);
+    margin: 0 auto;
+    padding: 0 1rem;
 }
 
 .edu-card:hover {
